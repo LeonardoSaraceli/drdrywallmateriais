@@ -36,7 +36,6 @@ export default function Hero() {
 
               <div className={styles.contactInfo}>
                 <span className={styles.phoneNumber}>(21) 3556-2929</span>
-                <span className={styles.contactHours}>Seg-Sex: 8h às 18h</span>
               </div>
             </div>
           </div>
