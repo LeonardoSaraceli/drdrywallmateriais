@@ -21,7 +21,7 @@ export default function Materials() {
       whatsappMessage:
         'Olá! Tenho interesse na Tinta Coralit Ultra Resistência para meu projeto.',
     },
-    { 
+    {
       id: 3,
       name: 'Ferramentas Profissionais',
       description:
@@ -34,6 +34,7 @@ export default function Materials() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [touchStartX, setTouchStartX] = useState(0)
   const [isHoveringQuickAdd, setIsHoveringQuickAdd] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const autoPlayInterval = useRef<NodeJS.Timeout | null>(null)
 
   // Funções de navegação
@@ -51,6 +52,23 @@ export default function Materials() {
     setActiveIndex(index)
     resetAutoPlay()
   }
+
+  // Detectar se é dispositivo móvel
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768) // Ajuste o breakpoint conforme necessário
+    }
+
+    // Verificar na montagem
+    checkMobile()
+
+    // Adicionar listener para redimensionamento
+    window.addEventListener('resize', checkMobile)
+
+    return () => {
+      window.removeEventListener('resize', checkMobile)
+    }
+  }, [])
 
   // Auto-play functionality
   const startAutoPlay = useCallback(() => {
@@ -126,6 +144,9 @@ export default function Materials() {
     }
   }, [startAutoPlay])
 
+  // Determinar se deve mostrar o texto
+  const shouldShowText = isHoveringQuickAdd || isMobile
+
   return (
     <section id="produtos-drywall" className={styles.section}>
       <div className={`container ${styles.content}`}>
@@ -173,7 +194,7 @@ export default function Materials() {
               >
                 {/* Quick Add Button */}
                 <div
-                  className={`${styles.quickAddContainer} ${isHoveringQuickAdd ? styles.expanded : ''}`}
+                  className={`${styles.quickAddContainer} ${shouldShowText ? styles.expanded : ''}`}
                   onMouseEnter={() => setIsHoveringQuickAdd(true)}
                   onMouseLeave={() => setIsHoveringQuickAdd(false)}
                 >
@@ -186,7 +207,7 @@ export default function Materials() {
                     className={styles.quickAddButton}
                   >
                     <ShoppingBag size={20} className={styles.quickAddIcon} />
-                    {isHoveringQuickAdd && (
+                    {shouldShowText && (
                       <span className={styles.quickAddText}>
                         Solicitar Orçamento
                       </span>
