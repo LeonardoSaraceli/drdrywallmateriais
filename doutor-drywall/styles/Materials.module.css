@@ -472,6 +472,11 @@
     z-index: 20;
   }
 
+  .prevButton,
+  .nextButton {
+    display: none;
+  }
+
   .prevButton {
     left: 10px;
   }
