@@ -1,0 +1,427 @@
+.footer {
+  background-color: #1a202c;
+  color: #ffffff;
+  padding: 80px 0 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #5c0b1c, #4a0917);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+/* Logo Section */
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #f9fafb;
+  border-radius: 2px;
+}
+
+.description {
+  font-size: 1.0625rem;
+  color: #cbd5e0;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+  max-width: 400px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.socialLink {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.socialLink:hover {
+  background: #5c0b1c;
+  transform: translateY(-2px);
+  border-color: #5c0b1c;
+}
+
+.socialIcon {
+  font-size: 1.25rem;
+}
+
+/* Sections Common */
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #f9fafb;
+  border-radius: 2px;
+}
+
+/* Contact Section */
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.contactIcon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contactLabel {
+  font-size: 0.875rem;
+  color: #a0aec0;
+  font-weight: 500;
+}
+
+.contactLink {
+  color: #e2e8f0;
+  text-decoration: none;
+  line-height: 1.5;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  font-weight: 400;
+}
+
+.contactLink:hover {
+  color: #ffffff;
+}
+
+/* Hours Section */
+.hoursList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hoursItem {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hoursIcon {
+  color: white;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.hoursContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.hoursDay {
+  font-size: 0.9375rem;
+  color: #cbd5e0;
+  font-weight: 400;
+}
+
+.hoursTime {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* CTA Section */
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ctaDescription {
+  font-size: 1rem;
+  color: #cbd5e0;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+  max-width: 300px;
+}
+
+.whatsappButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: #5c0b1c;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(92, 11, 28, 0.2);
+  max-width: 250px;
+}
+
+.whatsappButton:hover {
+  background: #4a0917;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(92, 11, 28, 0.3);
+}
+
+.buttonIcon {
+  font-size: 1.25rem;
+}
+
+/* Bottom Section */
+.bottomSection {
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.copyright {
+  margin-bottom: 1.5rem;
+}
+
+.copyrightText {
+  font-size: 0.9375rem;
+  color: #a0aec0;
+  margin: 0 0 0.5rem;
+  font-weight: 400;
+}
+
+.companyInfo {
+  font-size: 0.875rem;
+  color: #718096;
+  margin: 0;
+  font-weight: 400;
+}
+
+.seoText {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.seoText p {
+  font-size: 0.75rem;
+  color: #4a5568;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Responsive Design */
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    padding: 60px 0 30px;
+  }
+
+  .mainContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .logoSection {
+    grid-column: 1 / -1;
+    text-align: center;
+    align-items: center;
+  }
+
+  .logo::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .description {
+    max-width: 600px;
+    text-align: center;
+  }
+}
+
+/* Desktop (1024px +) */
+@media (min-width: 1024px) {
+  .mainContent {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .logoSection {
+    grid-column: span 2;
+  }
+}
+
+/* Mobile (até 767px) */
+@media (max-width: 767px) {
+  .footer {
+    padding: 50px 0 30px;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .mainContent {
+    gap: 2.5rem;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .contactItem {
+    gap: 0.75rem;
+  }
+
+  .contactIcon {
+    width: 36px;
+    height: 36px;
+    font-size: 0.875rem;
+  }
+
+  .contactLink {
+    font-size: 0.9375rem;
+  }
+
+  .whatsappButton {
+    max-width: 100%;
+    padding: 0.875rem 1.25rem;
+  }
+
+  .copyrightText {
+    font-size: 0.875rem;
+  }
+
+  .companyInfo {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Mobile pequeno (até 400px) */
+@media (max-width: 400px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9375rem;
+  }
+
+  .socialLink {
+    width: 36px;
+    height: 36px;
+  }
+
+  .socialIcon {
+    font-size: 1.125rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.125rem;
+  }
+
+  .contactIcon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+
+  .contactLink {
+    font-size: 0.875rem;
+  }
+
+  .hoursDay {
+    font-size: 0.875rem;
+  }
+
+  .hoursTime {
+    font-size: 0.9375rem;
+  }
+}

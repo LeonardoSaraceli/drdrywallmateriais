@@ -1,0 +1,308 @@
+.section {
+  padding: 100px 0;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #5c0b1c;
+  border-radius: 2px;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: #4a5568;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 1.5rem auto 0;
+  font-weight: 400;
+}
+
+.coverageNote {
+  background: #f8fafc;
+  border-left: 4px solid #5c0b1c;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+.noteIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.coverageNote p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Cities Grid */
+.citiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.cityCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.cityCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e0;
+}
+
+.cityCard.highlighted {
+  border: 2px solid #5c0b1c;
+  background: linear-gradient(to bottom right, #ffffff, #fef2f2);
+}
+
+.cityContent {
+  position: relative;
+  z-index: 1;
+}
+
+.cityHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cityIcon {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.cityName {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cityDescription {
+  color: #4a5568;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+.highlightBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #5c0b1c;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Footer Info */
+.footerInfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  background: #f8fafc;
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.infoIcon {
+  font-size: 2rem;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.infoContent h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0 0 0.5rem;
+}
+
+.infoContent p {
+  color: #4a5568;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+/* Responsive Design */
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .citiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .footerInfo {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile (até 767px) */
+@media (max-width: 767px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .description {
+    font-size: 1.0625rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .coverageNote {
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .citiesGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .cityCard {
+    padding: 1.5rem;
+  }
+
+  .cityName {
+    font-size: 1.25rem;
+  }
+
+  .footerInfo {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .infoItem {
+    align-items: center;
+  }
+}
+
+/* Mobile pequeno (até 400px) */
+@media (max-width: 400px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .cityCard {
+    padding: 1.25rem;
+  }
+
+  .cityHeader {
+    gap: 0.75rem;
+  }
+
+  .cityIcon {
+    font-size: 1.25rem;
+  }
+
+  .cityName {
+    font-size: 1.125rem;
+  }
+
+  .infoItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .infoIcon {
+    font-size: 1.75rem;
+  }
+}

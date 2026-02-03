@@ -1,0 +1,85 @@
+/* AnnouncementBarSimple.module.css */
+.announcementBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  background: #5c0b1c; /* Vermelho vinho */
+  color: white;
+  height: 50px;
+  max-height: 70px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  z-index: 1000;
+  text-align: center;
+}
+
+.navButton {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.navButton:hover:not(:disabled) {
+  opacity: 1;
+}
+
+.navButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.chevron {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.messageContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.message {
+  font-size: 0.9rem;
+  font-weight: 400;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 0 0.5rem;
+  color: white;
+}
+
+.message.visible {
+  opacity: 1;
+}
+
+.message.hidden {
+  opacity: 0;
+}
+
+@media (max-width: 480px) {
+  .navButton {
+    width: 30px;
+  }
+
+  .message {
+    font-size: 0.9rem;
+  }
+}
