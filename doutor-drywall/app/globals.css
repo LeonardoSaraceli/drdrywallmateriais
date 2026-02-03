@@ -18,6 +18,11 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* Classes utilitárias */
 .container {
   width: 100%;
