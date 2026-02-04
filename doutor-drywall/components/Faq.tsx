@@ -40,8 +40,7 @@ const FaqSection: React.FC = () => {
     {
       id: 5,
       question: 'Vocês vendem apenas drywall?',
-      answer:
-        'Nosso foco principal é drywall, mas também trabalhamos com materiais complementares necessários para a instalação, como perfis metálicos, parafusos e acessórios.',
+      answer: 'Não. Também trabalhamos com materiais de construção no geral.',
     },
     {
       id: 6,
