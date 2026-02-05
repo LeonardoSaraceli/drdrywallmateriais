@@ -364,3 +364,9 @@
     font-size: 1rem;
   }
 }
+
+@media screen and (max-height: 650px), screen and (max-width: 320px) {
+  .scrollIndicator {
+    display: none;
+  }
+}
