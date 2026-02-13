@@ -199,12 +199,98 @@
   background-image: url('../public/drywall-panel-product.webp');
 }
 
+.image1_2 {
+  background-image: url('../public/drywall-panel-product-2.jpeg');
+}
+
+.image1_3 {
+  background-image: url('../public/drywall-panel-product-3.jpeg');
+}
+
 .image2 {
-  background-image: url('../public/materials-background.webp');
+  background-image: url('../public/la_de_pet.jpeg');
 }
 
 .image3 {
+  background-image: url('../public/la_de_vidro.jpeg');
+}
+
+.image3_2 {
+  background-image: url('../public/la_de_vidro_2.jpeg');
+}
+
+.image3_3 {
+  background-image: url('../public/la_de_vidro_3.jpeg');
+}
+
+.image4 {
+  background-image: url('../public/la_de_rocha.jpeg');
+}
+
+.image4_2 {
+  background-image: url('../public/la_de_rocha_2.webp');
+}
+
+.image5 {
+  background-image: url('../public/ferragens_de_drywall.jpeg');
+}
+
+.image5_2 {
+  background-image: url('../public/ferragens_de_drywall_2.jpeg');
+}
+
+.image5_3 {
+  background-image: url('../public/ferragens_de_drywall_3.jpeg');
+}
+
+.image6 {
+  background-image: url('../public/rodape.jpeg');
+}
+
+.image6_2 {
+  background-image: url('../public/rodape_2.jpeg');
+}
+
+.image7 {
+  background-image: url('../public/materials-background.webp');
+}
+
+.image8 {
   background-image: url('../public/tools-product.webp');
+}
+
+/* ===== BOTÕES DE NAVEGAÇÃO DE IMAGENS ===== */
+.imageNavButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 25;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  color: #333;
+}
+
+.imageNavButton:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.imagePrevButton {
+  left: 10px;
+}
+
+.imageNextButton {
+  right: 10px;
 }
 
 /* Quick Add Button */
@@ -525,6 +611,19 @@
 
   .benefitItem {
     padding: 1.5rem 1rem;
+  }
+
+  .imageNavButton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .imagePrevButton {
+    left: 5px;
+  }
+
+  .imageNextButton {
+    right: 5px;
   }
 }
 
