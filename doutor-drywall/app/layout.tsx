@@ -28,6 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <link rel="icon" href="./new-favicon.ico" sizes="any" />
       <body className={inter.className}>
         {children}
         <FloatingWhatsAppButton />
